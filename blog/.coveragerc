@@ -1,9 +1,0 @@
-[run]
-include = blog/*, helloworld/*
-
-[report]
-omit =
-    project/settings/*
-    project/*/migrations/*
-
-show_missing = True
