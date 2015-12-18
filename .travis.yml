@@ -1,6 +1,11 @@
 language: python
 python:
-  - "3.4"
-  - "3.5"
-install: "pip install -r requirements.txt"
-script: "python blog/manage.py test"
+  - 3.4
+  - 3.5
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+script:
+  - cd blog && coverage run manage.py test
+after_success:
+  coveralls
