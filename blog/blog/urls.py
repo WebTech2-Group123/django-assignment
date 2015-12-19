@@ -22,4 +22,7 @@ urlpatterns = [
     # admin panel
     url(r'^admin/', admin.site.urls),
 
+    # posts app
+    url(r'^posts/', include('posts.urls'))
+
 ]
