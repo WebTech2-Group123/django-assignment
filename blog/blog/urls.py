@@ -26,6 +26,6 @@ urlpatterns = [
     url(r'^accounts/', include('accounts.urls')),
 
     # posts app
-    url(r'^posts/', include('posts.urls'))
+    url(r'^posts/', include('posts.urls', namespace='posts'))
 
 ]
