@@ -1,6 +1,5 @@
 from django import forms
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 from .models import Post
 
@@ -24,6 +23,6 @@ def add_post(request):
         instance = form.save(commit=False)
         instance.user = request.user
         instance.save()
-        return HttpResponse('done')
+        return redirect('posts:index')
 
     return render(request, 'posts/new.html', {'form': form})
