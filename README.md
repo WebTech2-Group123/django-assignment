@@ -5,11 +5,11 @@
 
 Tasks:
  * [ ] Blog:
-    * [ ] see posts
-    * [ ] add post
+    * [x] see posts
+    * [x] add post
     * [ ] login
  * [ ] Third Party Package
- * [ ] Test model unit
+ * [x] Test model unit
  * [ ] Functional Test (optional)
     * [ ] login
     * [ ] add post

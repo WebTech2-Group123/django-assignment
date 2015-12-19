@@ -3,6 +3,30 @@ from django.test import TestCase, Client
 from .models import Post
 
 
+class PostModelTest(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username='user', password='top_secret')
+
+    def test_save_and_retrieve_posts(self):
+        post1 = Post()
+        post1.title = 'Alex'
+        post1.text = 'Sucks <3'
+        post1.user = self.user
+        post1.save()
+
+        post2 = Post()
+        post2.title = 'Davide'
+        post2.text = 'Sucks even more <3'
+        post2.user = self.user
+        post2.save()
+
+        posts = Post.objects.order_by('-creation_date')
+        self.assertEqual(posts.count(), 2)
+
+        self.assertEqual(posts[0], post2)
+        self.assertEqual(posts[1], post1)
+
+
 class PostFormTests(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(username='user', password='top_secret')
