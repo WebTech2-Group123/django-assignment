@@ -22,6 +22,4 @@ urlpatterns = [
     # admin panel
     url(r'^admin/', admin.site.urls),
 
-    # hello world
-    url(r'', include('helloworld.urls')),
 ]
