@@ -8,7 +8,7 @@ Tasks:
     * [x] see posts
     * [x] add post
     * [ ] login
- * [ ] Third Party Package
+ * [x] Third Party Package
  * [x] Test model unit
  * [ ] Functional Test (optional)
     * [ ] login

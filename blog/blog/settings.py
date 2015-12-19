@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bootstrap3',
     'accounts.apps.AccountsConfig',
     'posts.apps.PostsConfig',
     'django.contrib.admin',
@@ -121,3 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.abspath(os.path.join(BASE_DIR, 'static'))
+]
