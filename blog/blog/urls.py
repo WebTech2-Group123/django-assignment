@@ -22,6 +22,9 @@ urlpatterns = [
     # admin panel
     url(r'^admin/', admin.site.urls),
 
+    # accounts (login etc)
+    url(r'^accounts/', include('accounts.urls')),
+
     # posts app
     url(r'^posts/', include('posts.urls'))
 
