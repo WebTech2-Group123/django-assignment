@@ -4,10 +4,15 @@
 
 {% block content %}
 
+    <h1>New Post</h1>
+
     <form method="post">
         {% csrf_token %}
         {% bootstrap_form form %}
-        <input type="submit" value="Create"/>
+        {% buttons %}
+            <input class="btn btn-primary" type="submit">
+        {% endbuttons %}
     </form>
+
 
 {% endblock %}

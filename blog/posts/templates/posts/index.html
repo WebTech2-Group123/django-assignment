@@ -4,11 +4,18 @@
     {% if posts %}
         <ul>
             {% for post in posts %}
-                <li>
-                    <div>
-                        <h2>{{ post.title }}</h2>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>{{ post.title }}</h3>
+                    </div>
+
+                    <div class="panel-body">
                         <p>{{ post.text }}</p>
-                        <p>{{ post.creation_date }}</p>
+                    </div>
+
+                    <div class="panel-footer">
+                        <p>@{{ post.user }} on {{ post.creation_date }}</p>
+                    </div>
                     </div>
                 </li>
             {% endfor %}
