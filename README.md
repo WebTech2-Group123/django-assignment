@@ -10,7 +10,7 @@ Tasks:
     * [x] login
  * [x] Third Party Package
  * [x] Test model unit
- * [ ] Functional Test (optional)
-    * [ ] login
-    * [ ] add post
-    * [ ] check new post's list
+ * [x] Functional Test (optional)
+    * [x] login
+    * [x] add post
+    * [x] check new post's list
