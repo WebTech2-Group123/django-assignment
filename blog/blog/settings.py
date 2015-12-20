@@ -129,3 +129,10 @@ EMAIL_USE_TLS = env('EMAIL_USE_TLS', True)
 # https://django-registration.readthedocs.org/en/2.0.3/quickstart.html
 
 ACCOUNT_ACTIVATION_DAYS = 7
+
+# Bootstrap3 integration
+# http://django-bootstrap3.readthedocs.org/en/latest/settings.html
+
+BOOTSTRAP3 = {
+    'set_required': False,
+}

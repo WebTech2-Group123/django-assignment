@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'posts:index' %}">Blog</a>
+            <a class="navbar-brand" href="{% url 'posts:index' %}">Blog - Group 123</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -50,18 +50,30 @@
     </div>
 </nav>
 
-<div class="container">
+<div id="wrap">
+    <section id="main" class="container">
 
-    <h1 class="page-header">
-        {% block header %}
+        <h1 class="page-header">
+            {% block header %}
+            {% endblock %}
+        </h1>
+
+        <!-- templates here -->
+        {% block content %}
         {% endblock %}
-    </h1>
 
-    <!-- templates here -->
-    {% block content %}
-    {% endblock %}
-
+    </section>
 </div>
+
+<footer class="footer">
+    <div class="container">
+        <p>Group 123 -
+            <a href="https://github.com/WebTech2-Group123/django-assignment" target="_blank">
+                https://github.com/WebTech2-Group123/django-assignment
+            </a>
+        </p>
+    </div>
+</footer>
 
 <script src="{% static "js/jquery-2.1.4.min.js" %}"></script>
 <script src="{% static "js/bootstrap.min.js" %}"></script>

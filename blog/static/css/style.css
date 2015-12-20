@@ -1,7 +1,32 @@
+html, body {
+    height: 100%;
+}
+
 body {
     padding-top: 50px;
 }
 
 form {
     margin-top: 30px;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+#main {
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+.footer {
+    background-color: #222;
+    color: #9d9d9d;
+    text-align: center;
+    padding: 15px;
+
+    position: relative;
+    height: 50px;
+    margin-top: -50px;
+    clear: both;
 }
