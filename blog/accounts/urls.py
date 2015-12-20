@@ -3,11 +3,7 @@ from .views import profile, profile_edit
 
 urlpatterns = [
 
-    # login
-    url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'accounts/login.html'}),
-
-    # logout
-    url(r'^logout/$', 'django.contrib.auth.views.logout_then_login'),
+    # login, logout, ecc. are already defined by Django
 
     # profile
     url(r'^profile/$', profile, name='profile'),
