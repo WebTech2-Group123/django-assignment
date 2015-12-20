@@ -1,1 +1,2 @@
+{{site}}
 Key = {{ activation_key }}

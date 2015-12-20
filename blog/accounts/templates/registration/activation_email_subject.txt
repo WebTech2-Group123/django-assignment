@@ -1,1 +1,1 @@
-Subject = {{ activation_key }}
+[Group 123 Blog] Registration
