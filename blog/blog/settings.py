@@ -110,13 +110,11 @@ STATICFILES_DIRS = [
     os.path.abspath(os.path.join(BASE_DIR, 'static'))
 ]
 
-# Window to activate new accounts
-# https://django-registration.readthedocs.org/en/2.0.3/quickstart.html#quickstart
+# Email
+#   -> print in console by default
+#   -> look in environment variables for SMTP configuration
+# https://docs.djangoproject.com/en/1.9/topics/email/
 
-ACCOUNT_ACTIVATION_DAYS = 7
-
-# email -> print in console by default
-#       -> look in environment variables for SMTP configuration
 EMAIL_BACKEND = env('EMAIL_BACKEND', 'django.core.mail.backends.console.EmailBackend')
 
 # SendGrid
@@ -126,3 +124,8 @@ EMAIL_HOST_USER = env('EMAIL_HOST_USER') or env('SENDGRID_USERNAME')
 EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD') or env('SENDGRID_PASSWORD')
 EMAIL_PORT = env('EMAIL_PORT', 587)
 EMAIL_USE_TLS = env('EMAIL_USE_TLS', True)
+
+# Window to activate new accounts
+# https://django-registration.readthedocs.org/en/2.0.3/quickstart.html
+
+ACCOUNT_ACTIVATION_DAYS = 7

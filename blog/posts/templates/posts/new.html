@@ -1,18 +1,21 @@
 {% extends 'base.html' %}
 
-{% load bootstrap3 %}
+{% block title %}
+    New Post | {{ block.super }}
+{% endblock %}
+
+{% block header %}
+    Posts
+{% endblock %}
 
 {% block content %}
-
-    <h1>New Post</h1>
+    {% load bootstrap3 %}
 
     <form method="post">
         {% csrf_token %}
         {% bootstrap_form form %}
         {% buttons %}
-            <input class="btn btn-primary" type="submit">
+            <input class="btn btn-primary" type="submit" value="Save">
         {% endbuttons %}
     </form>
-
-
 {% endblock %}

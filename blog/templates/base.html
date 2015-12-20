@@ -8,7 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <title>Blog</title>
+    <title>
+        {% block title %}
+            Group 123 Blog
+        {% endblock %}
+    </title>
+
     <link rel="icon" href="{% static "img/favicon.png" %}">
 
     <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
@@ -30,7 +35,7 @@
             <a class="navbar-brand" href="{% url 'posts:index' %}">Blog</a>
         </div>
         <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
 
                 <li class="{% ifequal request.path '/posts/' %} active {% endifequal %}">
                     <a href="{% url 'posts:index' %}">All Posts</a>
@@ -46,9 +51,16 @@
 </nav>
 
 <div class="container">
+
+    <h1 class="page-header">
+        {% block header %}
+        {% endblock %}
+    </h1>
+
+    <!-- templates here -->
     {% block content %}
-        <!-- templates here -->
     {% endblock %}
+
 </div>
 
 <script src="{% static "js/jquery-2.1.4.min.js" %}"></script>

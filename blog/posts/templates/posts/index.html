@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
+{% block title %}
+    Home | {{ block.super }}
+{% endblock %}
+
+{% block header %}
+    Posts
+{% endblock %}
+
 {% block content %}
     {% if posts %}
         <ul>
@@ -16,7 +24,7 @@
                     <div class="panel-footer">
                         <p>@{{ post.user }} on {{ post.creation_date }}</p>
                     </div>
-                    </div>
+                </div>
                 </li>
             {% endfor %}
         </ul>
