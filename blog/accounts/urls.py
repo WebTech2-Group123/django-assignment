@@ -1,5 +1,5 @@
 from django.conf.urls import url, include
-from .views import profile
+from .views import profile, profile_edit
 
 urlpatterns = [
 
@@ -11,6 +11,7 @@ urlpatterns = [
 
     # profile
     url(r'^profile/$', profile, name='profile'),
+    url(r'^profile/edit$', profile_edit, name='profile_edit'),
 
     # registration, activation
     url(r'^', include('registration.backends.hmac.urls')),
