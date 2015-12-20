@@ -1,4 +1,13 @@
-<h1>Activate Complete</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequuntur cumque distinctio, doloremque dolorum
-    ea explicabo fuga, incidunt itaque magnam magni mollitia natus possimus quisquam recusandae reprehenderit similique
-    tenetur vel.</p>
+{% extends 'base.html' %}
+
+{% block title %}
+    Activation Complete | {{ block.super }}
+{% endblock %}
+
+{% block header %}
+    Activation Complete
+{% endblock %}
+
+{% block content %}
+    <p>Your account is now active! Enjoy it =)</p>
+{% endblock %}

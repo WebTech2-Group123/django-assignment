@@ -1,2 +1,6 @@
-{{site}}
-Key = {{ activation_key }}
+Hi,
+
+thank you for the registration. Please activate your account using the following link:
+    {{site}}/accounts/activate/{{ activation_key }}
+
+Cheers =)
