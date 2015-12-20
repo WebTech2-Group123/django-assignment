@@ -27,6 +27,7 @@
             <td>{{ user.date_joined }}</td>
         </tr>
     </table>
-    <a href="{% url 'profile_edit' %}" class="btn btn-primary">Edit</a>
+    <a href="{% url 'profile_edit' %}" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> Edit</a>
+    <a href="{% url 'auth_password_change' %}" class="btn btn-primary"><i class="glyphicon glyphicon-lock"></i> Change Password</a>
 {% endblock %}
 
