@@ -27,7 +27,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
         # add post
         title_field = self.browser.find_element_by_name('title')
         text_field = self.browser.find_element_by_name('text')
-        save_button = self.browser.find_elements_by_css_selector('input[type=submit]')[0]
+        save_button = self.browser.find_elements_by_css_selector('button[type=submit]')[0]
         title_field.send_keys('lorem')
         text_field.send_keys('ipsum 123')
         save_button.click()
