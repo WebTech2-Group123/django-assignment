@@ -4,10 +4,10 @@
 [![Coverage Status](https://coveralls.io/repos/WebTech2-Group123/django-assignment/badge.svg?branch=master&service=github)](https://coveralls.io/github/WebTech2-Group123/django-assignment?branch=master)
 
 Tasks:
- * [ ] Blog:
+ * [x] Blog:
     * [x] see posts
     * [x] add post
-    * [ ] login
+    * [x] login
  * [x] Third Party Package
  * [x] Test model unit
  * [ ] Functional Test (optional)
