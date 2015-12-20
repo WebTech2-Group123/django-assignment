@@ -1,20 +1,15 @@
 from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
-from django import forms
-from django.contrib.auth.models import User
+from .forms import ProfileEditForm
 
 
-class ProfileEditForm(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = ["first_name", "last_name"]
-
-
+# render the profile page
 @login_required
 def profile(request):
     return render(request, 'accounts/profile.html')
 
 
+# render the profile edit form
 @login_required
 def profile_edit(request):
     form = ProfileEditForm(request.POST or None, instance=request.user)

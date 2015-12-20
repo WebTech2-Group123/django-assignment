@@ -38,14 +38,14 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <!-- all posts -->
-                <li class="{% ifequal request.path '/posts/' %} active {% endifequal %}">
+                <li>
                     <a href="{% url 'posts:index' %}">All Posts</a>
                 </li>
 
                 {% if user.is_authenticated %}
 
                     <!-- new post -->
-                    <li class="{% ifequal request.path '/posts/new' %} active {% endifequal %}">
+                    <li>
                         <a href="{% url 'posts:new' %}">New Posts</a>
                     </li>
 
