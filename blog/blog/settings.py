@@ -115,6 +115,7 @@ STATICFILES_DIRS = [
 #   -> look in environment variables for SMTP configuration
 # https://docs.djangoproject.com/en/1.9/topics/email/
 
+DEFAULT_FROM_EMAIL = 'django@assignment.eu'
 EMAIL_BACKEND = env('EMAIL_BACKEND', 'django.core.mail.backends.console.EmailBackend')
 
 # SendGrid
